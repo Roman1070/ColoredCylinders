@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad431d176e44744fac0f7b4f758083b, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  availableColors:
+  - {fileID: 2100000, guid: 76340d88a562612408e8b1be73ef198c, type: 2}
+  - {fileID: 2100000, guid: 6006e0481f032754196db63d92b2df24, type: 2}
+  - {fileID: 2100000, guid: 297bafe754c456049bbbb89a208a67b4, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 59e85a1bb3cfdc842a6083e04fb67c21, type: 2}
+  columnsCount: 3
+  playersCount: 2
+  ColorChangeInterval: 5
+  fixDuration: 2
