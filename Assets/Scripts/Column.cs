@@ -5,19 +5,19 @@ using Zenject;
 [RequireComponent(typeof(MeshRenderer))]
 public class Column : MonoBehaviour
 {
+    [SerializeField] private Transform playerPoint;
+    [SerializeField] private MeshRenderer meshRenderer;
+
     [Inject] private GameEvents events;
     [Inject] private Data data;
 
-    private MeshRenderer meshRenderer;
     private Material currentMaterial;
     private int currentMaterialIndex;
 
     public int Color => currentMaterialIndex;
 
-    private void Start()
-    {
-        meshRenderer = GetComponent<MeshRenderer>();
-    }
+    public Transform PlayerPoint => playerPoint;
+
 
     public void ChangeColor(int newColorIndex)
     {
@@ -27,7 +27,7 @@ public class Column : MonoBehaviour
         events.OnColumnColored?.Invoke(this);
     }
 
-    public void StartLosingColor(float duration)
+    public void LoseColor(float duration)
     {
         currentMaterial.DOColor(data.DefaultMaterial.color, duration).OnComplete(()=>
         {

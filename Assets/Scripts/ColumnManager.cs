@@ -13,18 +13,19 @@ public class ColumnManager : MonoBehaviour
     {
         columns = GetComponentsInChildren<Column>();
         events.OnColumnFixed.AddListener(OnAllColumnsFixed);
-        Invoke(nameof(ChangeRandomColor), data.TimeInterval);
+        Invoke(nameof(ColorRandomColumn), data.ColorChangeInterval);
     }
 
-    private void ChangeRandomColor()
+    private void ColorRandomColumn()
     {
         int columnIndex = UnityEngine.Random.Range(0, columns.Length);
+        int colorIndex = UnityEngine.Random.Range(0, data.AvailableColors.Length);
 
-        columns[columnIndex].ChangeColor(UnityEngine.Random.Range(0, data.AvailableColors.Length));
+        columns[columnIndex].ChangeColor(colorIndex);
     }
 
     private void OnAllColumnsFixed()
     {
-        Invoke(nameof(ChangeRandomColor), data.TimeInterval);
+        Invoke(nameof(ColorRandomColumn), data.ColorChangeInterval);
     }
 }

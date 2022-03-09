@@ -8,15 +8,17 @@ public class Data : ScriptableObject
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private int columnsCount;
     [SerializeField] private int playersCount;
-    [SerializeField] private float ColorChangeInterval;
+    [SerializeField] private float colorChangeInterval;
     [SerializeField] private float fixDuration;
+    [SerializeField] private float playerMovementDuration;
 
     public Material[] AvailableColors => availableColors;
     public Material DefaultMaterial => defaultMaterial;
     public int ColumnsCount => columnsCount;
     public int PlayersCount => playersCount;
-    public float TimeInterval => ColorChangeInterval;
+    public float ColorChangeInterval => colorChangeInterval;
     public float FixDuration => fixDuration;
+    public float PlayerMovementDuration => playerMovementDuration;
 
     public readonly Dictionary<string, int> AvailableColorsNames = new Dictionary<string, int>()
     {

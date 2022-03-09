@@ -19,5 +19,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 59e85a1bb3cfdc842a6083e04fb67c21, type: 2}
   columnsCount: 3
   playersCount: 2
-  ColorChangeInterval: 5
+  colorChangeInterval: 5
   fixDuration: 2
+  playerMovementDuration: 2
